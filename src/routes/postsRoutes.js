@@ -21,7 +21,7 @@ const upload = multer({ storage })
 
 const routes = (app) => {
     app.use(express.json());
-    app.user(cors(corsOptions));
+    app.use(cors(corsOptions));
 
     app.get('/posts', listPosts);
     app.post('/posts', uploadPost);
