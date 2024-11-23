@@ -9,6 +9,6 @@ export default async function connectDB(connectionUrl) {
         console.log('Connection Successful Established')
         return mongoClient;
     } catch(err) {
-        process.exit();
+        console.error(err.message);
     }
 }
