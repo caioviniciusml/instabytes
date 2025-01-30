@@ -4,7 +4,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   
 export async function generateDesc(imageBuffer) {
-  const prompt = "Gere uma descrição em português do Brasil para a seguinte Imagem";
+  const prompt = "Generate a description for this following image";
 
   try {
     const image = {
@@ -14,15 +14,15 @@ export async function generateDesc(imageBuffer) {
       },
     };
     const res = await model.generateContent([prompt, image]);
-    return res.response.text() || "Descrição não disponível.";
+    return res.response.text() || "Description unavailable.";
   } catch (err) {
-    console.error("Erro ao obter uma descrição da imagem:", err.message, err);
-    throw new Error("Erro ao obter uma descrição da imagem do Gemini.");
+    console.error("Error when getting a image description:", err.message, err);
+    throw new Error("Error when getting a image description from Gemini.");
   }
 }
 
 export async function generateAltText(imageBuffer) {
-    const prompt = "Gere uma alt text em português do Brasil para a seguinte Imagem";
+    const prompt = "Generate a alt text for this following image";
   
     try {
       const image = {
@@ -32,9 +32,9 @@ export async function generateAltText(imageBuffer) {
         },
       };
       const res = await model.generateContent([prompt, image]);
-      return res.response.text() || "Alt-text não disponível.";
+      return res.response.text() || "Alt-text unavailable.";
     } catch (err) {
-      console.error("Erro ao obter alt-text:", err.message, err);
-      throw new Error("Erro ao obter o alt-text do Gemini.");
+      console.error("Error when getting a image alt text:", err.message, err);
+      throw new Error("Error when getting a image alt text from Gemini.");
     }
 }
