@@ -5,8 +5,8 @@ This project is a RESTful API built with Node.js and Express, designed to handle
 ## Installation and Setup
 ### Clone the Repository
 
-`git clone <repository_url>`
-`cd <repository_folder>`
+`git clone https://github.com/caioviniciusml/instabytes.git`
+`cd instabytes`
 
 ### Install Dependencies
 
