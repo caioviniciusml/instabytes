@@ -6,6 +6,7 @@ This project is a RESTful API built with Node.js and Express, designed to handle
 ### Clone the Repository
 
 `git clone https://github.com/caioviniciusml/instabytes.git`
+</br>
 `cd instabytes`
 
 ### Install Dependencies
@@ -16,8 +17,9 @@ This project is a RESTful API built with Node.js and Express, designed to handle
 
 Create a .env file in the root directory and add the following environment variables:
 
-`GEMINI_API_KEY= <your_gemini_api_key>
-MONGODB_CONNECTION= <your_mongodb_connection_string>`
+`GEMINI_API_KEY= <your_gemini_api_key>`
+</br>
+`MONGODB_CONNECTION= <your_mongodb_connection_string>`
 
 Replace your_gemini_api_key and your_mongodb_connection_string with your actual credentials.
 
